@@ -1,0 +1,38 @@
+{
+	"name": "doniyorjon-bot",
+	"version": "1.0.0",
+	"description": "Doniyorjon nomidan javob beruvchi AI Telegram bot",
+	"main": "dist/bot.js",
+	"scripts": {
+		"dev": "nodemon --watch 'src/**/*.ts' --exec ts-node src/bot.ts",
+		"build": "tsc",
+		"start": "node dist/bot.js",
+		"clean": "rm -rf dist",
+		"prebuild": "npm run clean",
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"keywords": [
+		"telegram",
+		"bot",
+		"ai",
+		"gemini",
+		"nodejs",
+		"typescript"
+	],
+	"author": "Doniyorjon",
+	"license": "MIT",
+	"dependencies": {
+		"@google/generative-ai": "^0.21.0",
+		"dotenv": "^16.5.0",
+		"grammy": "^1.36.3"
+	},
+	"devDependencies": {
+		"@types/node": "^24.0.1",
+		"nodemon": "^3.1.10",
+		"ts-node": "^10.9.2",
+		"typescript": "^5.8.3"
+	},
+	"engines": {
+		"node": ">=18.0.0"
+	}
+}
